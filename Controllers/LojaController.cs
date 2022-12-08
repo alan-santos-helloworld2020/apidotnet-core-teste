@@ -45,7 +45,7 @@ namespace back.Controllers
             return Ok(lojas);
         }
 
-        [HttpGet("id")]
+        [HttpGet("{id}")]
         public async Task<ActionResult<Loja>> findById(int id)
         {
             var loja = this.lojas.Find((l) => l.id == id);
@@ -62,7 +62,7 @@ namespace back.Controllers
 
         }
 
-        [HttpPut("id")]
+        [HttpPut("{id}")]
         public async Task<ActionResult<Loja[]>> update(int id, Loja loja)
         {
             await this.findAll();
@@ -89,7 +89,7 @@ namespace back.Controllers
             }
         }
 
-        [HttpDelete("id")]
+        [HttpDelete("{id}")]
         public async Task<ActionResult<List<Loja>>> delete(int id)
         {
 
@@ -108,10 +108,6 @@ namespace back.Controllers
             {
                 return BadRequest();
             }
-
-
-
-
         }
 
     }
