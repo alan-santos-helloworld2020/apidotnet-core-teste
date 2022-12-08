@@ -12,11 +12,11 @@ namespace back.Controllers
     public class LojaController : ControllerBase
     {
         List<Cliente> cl = new(){
-                new Cliente(){id=1,data=DateTime.Now.ToShortDateString(),nome="alan",telefone="37520913",email="alan@gmail.com",cep="25515045"},
-                new Cliente(){id=2,data=DateTime.Now.ToShortDateString(),nome="paulo",telefone="37520913",email="paulo@gmail.com",cep="25515046"},
-                new Cliente(){id=3,data=DateTime.Now.ToShortDateString(),nome="mario",telefone="37520913",email="mario@gmail.com",cep="25515047"},
-                new Cliente(){id=4,data=DateTime.Now.ToShortDateString(),nome="josé",telefone="37520913",email="jose@gmail.com",cep="25515048"},
-                new Cliente(){id=5,data=DateTime.Now.ToShortDateString(),nome="carlos",telefone="37520913",email="carlos@gmail.com",cep="25515049"}
+                new Cliente(){id=1,data=DateTime.Now.ToShortDateString(),nome="alan",telefone="(21)00000-0000",email="alan@gmail.com",cep="25515045"},
+                new Cliente(){id=2,data=DateTime.Now.ToShortDateString(),nome="paulo",telefone="(21)00000-0000",email="paulo@gmail.com",cep="25515046"},
+                new Cliente(){id=3,data=DateTime.Now.ToShortDateString(),nome="mario",telefone="(21)00000-0000",email="mario@gmail.com",cep="25515047"},
+                new Cliente(){id=4,data=DateTime.Now.ToShortDateString(),nome="josé",telefone="(21)00000-0000",email="jose@gmail.com",cep="25515048"},
+                new Cliente(){id=5,data=DateTime.Now.ToShortDateString(),nome="carlos",telefone="(21)00000-0000",email="carlos@gmail.com",cep="25515049"}
 
         };
 
@@ -48,6 +48,8 @@ namespace back.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Loja>> findById(int id)
         {
+            await this.findAll();
+
             var loja = this.lojas.Find((l) => l.id == id);
 
             return Ok(loja);
@@ -57,6 +59,8 @@ namespace back.Controllers
         [HttpPost]
         public async Task<ActionResult<List<Loja>>> save(Loja loja)
         {
+            await this.findAll();
+
             this.lojas.Add(loja);
             return Ok(this.lojas);
 
