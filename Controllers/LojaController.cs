@@ -12,11 +12,11 @@ namespace back.Controllers
     public class LojaController : ControllerBase
     {
         List<Cliente> cl = new(){
-                new Cliente(){id=1,data=DateTime.Now.ToShortDateString(),nome="alan",telefone="(21)00000-0000",email="alan@gmail.com",cep="25515045"},
-                new Cliente(){id=2,data=DateTime.Now.ToShortDateString(),nome="paulo",telefone="(21)00000-0000",email="paulo@gmail.com",cep="25515046"},
-                new Cliente(){id=3,data=DateTime.Now.ToShortDateString(),nome="mario",telefone="(21)00000-0000",email="mario@gmail.com",cep="25515047"},
-                new Cliente(){id=4,data=DateTime.Now.ToShortDateString(),nome="josé",telefone="(21)00000-0000",email="jose@gmail.com",cep="25515048"},
-                new Cliente(){id=5,data=DateTime.Now.ToShortDateString(),nome="carlos",telefone="(21)00000-0000",email="carlos@gmail.com",cep="25515049"}
+                new Cliente(){id=1,data=DateTime.Now.ToShortDateString(),nome="alan",telefone="(21)00000-0000",email="fulanoalan@gmail.com",cep="11111-111"},
+                new Cliente(){id=2,data=DateTime.Now.ToShortDateString(),nome="paulo",telefone="(21)00000-0000",email="fulanopaulo@gmail.com",cep="22222-222"},
+                new Cliente(){id=3,data=DateTime.Now.ToShortDateString(),nome="mario",telefone="(21)00000-0000",email="fulanomario@gmail.com",cep="33333-333"},
+                new Cliente(){id=4,data=DateTime.Now.ToShortDateString(),nome="josé",telefone="(21)00000-0000",email="fulanojose@gmail.com",cep="44444-444"},
+                new Cliente(){id=5,data=DateTime.Now.ToShortDateString(),nome="carlos",telefone="(21)00000-0000",email="fulanocarlos@gmail.com",cep="55555-555"}
 
         };
 
